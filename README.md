@@ -1,3 +1,4 @@
+# CoinIcons
 ![Vercel](https://vercelbadge.vercel.app/api/kaanay03/coinicons)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
