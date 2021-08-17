@@ -1,0 +1,22 @@
+#api-section-header{
+    max-width: 600px;
+    text-align: center;
+}
+
+#api-section{
+    margin-top: 75px;
+}
+
+@media(max-width: 600px){
+    #api-section-header{
+        max-width: 85%;
+    }
+}
+
+.selection-container{
+    max-width: 700px;
+}
+
+.arg-desc{
+    font-size: 18px;
+}

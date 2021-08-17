@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+
+body {
+  font-family: 'Ropa Sans';
+}
+
+.color-primary{
+  color: black;
+}
+
+.color-secondary{
+  color: #545454;
+}
+
+.section-header{
+  font-size: 35px;
+}
+
+.paragraph-container{
+  max-width: 900px;
+  text-align: left;
+}
+
+@media(max-width: 900px){
+  .paragraph-container{
+    max-width: 85%;
+  }
+}

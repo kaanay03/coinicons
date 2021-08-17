@@ -1,0 +1,12 @@
+#copyright-text{
+    font-size: 21px;
+}
+
+.footer-link{
+    text-decoration: none;
+    color: #545454;
+}
+
+.footer-link:hover{
+    color: black;
+}
