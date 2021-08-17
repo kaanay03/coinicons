@@ -4,6 +4,7 @@ import Icon from './pages/icon/Icon';
 import Footer from './components/footer/Footer';
 import Terms from './pages/policies/Terms';
 import Privacy from './pages/policies/Privacy';
+import NotFound from './pages/notfound/NotFound';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ReactGA from 'react-ga';
 
@@ -17,18 +18,23 @@ function App() {
   return (
     <Router>
       <Header />
-      <Route exact path="/">
-          <Home />
-      </Route>
-      <Route exact path="/c/:slug">
-          <Icon />
-      </Route>
-      <Route path="/terms">
-        <Terms />
-      </Route>
-      <Route path="/privacy">
-        <Privacy />
-      </Route>
+      <Switch>
+        <Route exact path="/">
+            <Home />
+        </Route>
+        <Route exact path="/c/:slug">
+            <Icon />
+        </Route>
+        <Route path="/terms">
+          <Terms />
+        </Route>
+        <Route path="/privacy">
+          <Privacy />
+        </Route>
+        <Route status={404}>
+          <NotFound />
+        </Route>
+      </Switch>
       <Footer />
     </Router>
   );

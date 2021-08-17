@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import MetaTags from 'react-meta-tags';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 
 const sizes = [
@@ -22,7 +23,8 @@ const sizes = [
 
 function Icon(){
     let { slug } = useParams();
-    let [name, setName] = useState();
+    const [name, setName] = useState();
+    const [redirect, setRedirect] = useState("");
 
 
     useEffect(() => {
@@ -32,9 +34,16 @@ function Icon(){
     const getName = async() => {
         axios.get(`https://api.coinicons.net/crypto/info?slug=${slug}`).then(res => {
             setName(res.data.name);
+        }).catch(err => {
+            if (err.response.status === 500){
+                setRedirect('/404');
+            }
         })
     }
 
+    if (redirect.length > 0){
+        return <Redirect to={redirect} />
+    }
     return(
         <div>
             <MetaTags>

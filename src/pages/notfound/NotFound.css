@@ -1,0 +1,16 @@
+#error-code{
+    font-size: 175px;
+}
+
+#error-description{
+    font-size: 20px;
+}
+
+#back-home-link{
+    color: #5555;
+    text-decoration: none;
+}
+
+#back-home-link:hover{
+    color: black;
+}
